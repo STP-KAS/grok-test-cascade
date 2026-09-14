@@ -17,7 +17,7 @@ He asked for a take on in-progress ideas. This repo is that take. Not a security
 ## Read this
 
 1. **[REVIEW.md](REVIEW.md)** — original review. Not rewritten.
-2. **[VERIFICATION.md](VERIFICATION.md)** — tests re-run, txid lookup, what still could not be done.
+2. **[VERIFICATION.md](VERIFICATION.md)** — tests re-run, txid lookup, live `prove-live-paid.ts` on TN10 (gatherer empty).
 3. **[follow-up/](follow-up/)** — failing-then-passing tests: publisher-pays, disjoint founts, dust, liar unpaid, incomplete bytes.
 4. **[SOURCES.md](SOURCES.md)** — exact links and limits.
 
