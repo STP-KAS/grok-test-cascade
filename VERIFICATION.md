@@ -72,15 +72,33 @@ Still a login wall: “Content is user-generated and unverified.” Not used.
 
 ---
 
-## 5. Offered TN10 Kasware wallet — not used
+## 5. Live TN10 paid proof — ran, no coins to spend
 
-The follow-up offered a funded TN10 wallet in Kasware:
+The operator supplied the Kasware seed **out of band**. It is not in this repo, not in this file, and not in any commit. It was used locally to derive keys, then deleted from disk.
 
-`chrome-extension://hklhheigdmpoolooomdihmhlpjjdbklf/index.html#WalletTabScreen`
+**Derivation (Kaspa `PrivateKeyGenerator`, account 0, receive 0, Schnorr, testnet-10):**
 
-That is a **Chrome extension page**. This environment cannot drive it. I will not read Kasware’s extension storage for a seed or private key.
+`kaspatest:qrw0tuxnjukkrk7lm5v7chx4qpu8f8q0janp7jdk80z4tc8anu62gmvkwdwrt`
 
-To use that wallet for a live proof, the operator would send tKAS to a kascade-generated `~/.kascade/gatherer` address, then run `prove-live-paid.ts`. That step was not done here.
+That address is also present in Kasware’s local extension storage, so this seed is that Kasware account.
+
+| Network | What was checked | Result |
+|---|---|---|
+| testnet-10 | receive + change, accounts 0–2, indices 0–19, Schnorr and ECDSA | **0 tKAS** |
+| testnet-10 | extra path brute (`m/44'/111111'`, `972`, `0`, `60`; accounts 0–5 and 111111) against funded dump addresses | **no match** |
+| mainnet | same account, receive 0 | **18.07457812 KAS** — **not spent** |
+
+Kasware’s LevelDB also lists other `kaspatest:` addresses that **do** hold tKAS (six addresses, including ~274k, ~40k, ~35k, ~10k). This seed does not derive them. They are other keys or history/contacts in the same extension. Those coins were not used.
+
+`tools/prove-live-paid.ts` was executed against **live TN10** (public resolver, rusty-kaspa WASM v2.0.1). It built the 900,000-byte / 14-parcel / 3-fount job, then died on channel open:
+
+```
+nothing to spend at kaspatest:qrw0tuxnjukkrk7lm5v7chx4qpu8f8q0janp7jdk80z4tc8anu62gmvkwdwrt
+```
+
+Public TN10 faucets (`faucet-tn10.kaspanet.io` and aliases) return **403** from this host. No tKAS was mined.
+
+**What is now armed on this machine (not in git):** WASM SDK path in `~/.metered/kaspa.env`, gatherer key for the address above in `~/.kascade/gatherer.key`. Funding that address with ≥ ~1.6 tKAS and re-running `prove-live-paid.ts` is the remaining step. Need: 3 × 0.5 KAS escrow plus genesis/carve fees.
 
 ---
 
