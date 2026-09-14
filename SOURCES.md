@@ -88,6 +88,17 @@ Copied from his public X posts into `docs/author-screenshots/`. They are his lan
 | https://github.com/elldeeone/kaspa-x402/issues/13 | Parker’s RC1 review of that rail, same thread as the ask. |
 | https://kaspa-x402.org | Canonical Kaspa x402 docs |
 
+## Later pass (additive)
+
+See [VERIFICATION.md](VERIFICATION.md). REVIEW.md was not rewritten.
+
+- kascade `npm test`: 56/56 pass (2026-09-14, Node 24.19.0)
+- kascade demo: ran, liar unpaid, file byte-identical
+- README txid prefixes: not resolvable on api-tn10.kaspa.org
+- Claude artifact: still gated
+- Kasware TN10 wallet: not used (chrome-extension, no key export)
+- Follow-up tests: [follow-up/](follow-up/)
+
 ## What this review did not do
 
 - Did not execute `npm test` or the live TN10 harnesses.
