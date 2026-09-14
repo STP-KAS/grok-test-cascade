@@ -16,8 +16,10 @@ He asked for a take on in-progress ideas. This repo is that take. Not a security
 
 ## Read this
 
-1. **[REVIEW.md](REVIEW.md)** — what was done, why, what holds, what does not, what to fix.
-2. **[SOURCES.md](SOURCES.md)** — exact links, commits, and limits of this review.
+1. **[REVIEW.md](REVIEW.md)** — original review. Not rewritten.
+2. **[VERIFICATION.md](VERIFICATION.md)** — tests re-run, txid lookup, what still could not be done.
+3. **[follow-up/](follow-up/)** — failing-then-passing tests: publisher-pays, disjoint founts, dust, liar unpaid, incomplete bytes.
+4. **[SOURCES.md](SOURCES.md)** — exact links and limits.
 
 ## Account at a glance
 
