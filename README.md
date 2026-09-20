@@ -41,3 +41,12 @@ GitHub user created **2026-08-20**. No profile bio, no user Pages site (`kaspaht
 ## One-line take
 
 Build one publisher-pays file with the paid handshake. Stop selling a CDN, a phone mesh, and an agent marketplace until that exists.
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
